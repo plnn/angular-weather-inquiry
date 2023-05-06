@@ -1,0 +1,29 @@
+
+
+
+
+.btn {
+  border-radius: 5px;
+  padding: 10px;
+  margin-right: 10px;
+  &.primary {
+    border: none;
+    color: black;
+    background: none;
+    margin-left: 10px;
+    background:rgb(226, 35, 27);
+    color: white;
+  }
+  &.secondary {
+    border-radius: 5px;
+    color: black;
+    background: none;
+    margin-left: 10px;
+    color: black;
+    background:none;
+  }
+  &.disabled {
+    background:gray;
+    pointer-events: none;
+  }
+}

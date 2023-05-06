@@ -1,0 +1,10 @@
+<div class="location-list-container" *ngIf="showList">
+  <li (click)="selectLocation(location)" *ngFor="let location of locationList">
+    {{location.name}},{{location.sys.country}}
+    <span class="temp">{{location.main.temp}}</span>
+    <span class="coordinates"
+      >{{location.coord.lat}}, {{location.coord.lon}}</span
+    >
+    <span></span>
+  </li>
+</div>

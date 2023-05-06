@@ -1,0 +1,39 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div>
+  <div class="search-container">
+    <input [value]="inputValue" (keyup)="onKey($event)" />
+    <weather-button
+      [disabled]="inputValue === undefined || inputValue === '' || inputValue === null"
+      text="Search"
+      btnType="primary"
+      (onClick)="search()"
+    ></weather-button>
+
+    <weather-button
+      text="Clear"
+      btnType="secondary"
+      (click)="clear()"
+    ></weather-button>
+  </div>
+  <weather-location-list
+    [showList]="showList"
+    (emitSelectedLocation)="selectCountry($event)"
+    [locationList]="locationList"
+  >
+  </weather-location-list>
+  <div class="error" *ngIf="error">
+    {{error}}
+  </div>
+  <!-- <div class="daily-info-container" *ngIf="dailyInfo">
+    <button class="secondary-button" (click)="sortByTemp()">
+      Sort By Date
+    </button>
+    <li *ngFor="let di of dailyInfo">
+      <span
+        >Date:{{formatDate(di.dt)}} Clouds {{di.clouds}} Humidity:
+        {{di.humidity}} Temp:{{di.temp.day}} °C</span
+      >
+    </li>
+  </div> -->
+  <daily-weather-info [dailyInfo]="dailyInfo"></daily-weather-info>
+</div>

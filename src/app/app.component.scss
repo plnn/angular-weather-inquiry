@@ -1,0 +1,18 @@
+.search-container {
+  display: flex;
+  input {
+    border-radius:5px;
+    border-color: gray;
+  }
+  margin-bottom: 10px;
+}
+
+
+
+.error {
+  padding: 10px;
+  border-radius: 5px;
+  background: red;
+  color: white;
+  text-align:center;
+}

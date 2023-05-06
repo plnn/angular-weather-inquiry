@@ -1,0 +1,11 @@
+<div class="daily-info-container" *ngIf="dailyInfo">
+  <button class="secondary-button" (click)="sortByTemp()">
+    Sort By Date
+  </button>
+  <li *ngFor="let di of dailyInfo">
+    <span
+      >Date:{{formatDate(di.dt)}} Clouds {{di.clouds}} Humidity: {{di.humidity}}
+      Temp:{{di.temp.day}} °C</span
+    >
+  </li>
+</div>
